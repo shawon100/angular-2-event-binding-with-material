@@ -1,0 +1,82 @@
+<!--The whole content below can be removed with the new code.-->
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>
+
+<md-toolbar color="primary">
+    <button md-icon-button (click)="openNav()">
+                <md-icon class="md-24" >menu</md-icon>
+    </button>
+</md-toolbar>
+
+
+
+<div style="text-align:center">
+    <h1>
+        Welcome to {{title}}!!
+    </h1>
+</div><br><br>
+<div id="an"></div>
+
+<div class="row">
+    <div class="container">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <button class="btn btn-success" (click)="click()">Check</button><br><br><br><br>
+            <section class="example-section">
+                <label class="example-margin">Color:</label>
+                <md-radio-group [(ngModel)]="color">
+                    <md-radio-button class="example-margin" value="primary">
+                        Primary
+                    </md-radio-button>
+                    <md-radio-button class="example-margin" value="accent">
+                        Accent
+                    </md-radio-button>
+                    <md-radio-button class="example-margin" value="warn">
+                        Warn
+                    </md-radio-button>
+                </md-radio-group>
+            </section><br><br><br>
+            <md-slide-toggle [(ngModel)]="device" (change)="send($event)" [color]="color">Slide me!</md-slide-toggle><br><br><br>Color={{color}} Value={{device}}"
+            <br><br>
+
+            <md-input-container class="example-margin">
+                <input mdInput type="number" placeholder="Min value" [(ngModel)]="min">
+            </md-input-container>
+            <md-input-container class="example-margin">
+                <input mdInput type="number" placeholder="Max value" [(ngModel)]="max">
+            </md-input-container>
+
+            <md-slider color="primary" [min]="min" [max]="max" (change)="go($event)"></md-slider><br><br><br>
+
+
+
+
+
+
+            <md-card class="example-card">
+                <md-card-header>
+                    <div md-card-avatar class="example-header-image"></div>
+                    <md-card-title>Shiba Inu</md-card-title>
+                    <md-card-subtitle>Dog Breed</md-card-subtitle>
+                </md-card-header>
+                <img class="img-responsive" md-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+                <md-card-content>
+                    <p>
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+                    </p>
+                </md-card-content>
+                <md-card-actions>
+                    <button md-button>LIKE</button>
+                    <button md-button>SHARE</button>
+                </md-card-actions>
+            </md-card>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+</div>
